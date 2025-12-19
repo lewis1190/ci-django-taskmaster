@@ -10,5 +10,3 @@ Table Task {
   completed bool [not null]
   category integer [not null, ref: > Category.id]
 }
-
-// Ref: Task.category > Category.id
