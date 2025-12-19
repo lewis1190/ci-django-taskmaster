@@ -1,0 +1,14 @@
+Table Category {
+  id integer [primary key, not null]
+  name varchar [not null]
+}
+
+Table Task {
+  id integer [primary key, not null]
+  title varchar [not null]
+  due_date datetime [not null]
+  completed bool [not null]
+  category integer [not null, ref: > Category.id]
+}
+
+// Ref: Task.category > Category.id
