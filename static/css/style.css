@@ -12,6 +12,9 @@ body {
     transition: color ease-in-out 0.3s;
     font-size: 18px;
     padding-left: 5px;
+
+    /* Extra padding to center button */
+    padding-right: 5px;
 }
 
 .checkbox-btn {
