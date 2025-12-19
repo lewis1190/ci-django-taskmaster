@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=200, unique=True)
+    name = models.CharField(max_length=50, unique=True)
 
     class Meta:
         ordering = ['name']
@@ -13,8 +13,8 @@ class Category(models.Model):
 
 
 class Task(models.Model):
-    title = models.CharField(max_length=255)
-    due_date = models.DateTimeField(null=True, blank=True)
+    title = models.CharField(max_length=100)
+    due_date = models.DateTimeField()
     completed = models.BooleanField(default=False)
     category = models.ForeignKey(
         Category,
