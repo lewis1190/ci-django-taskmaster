@@ -50,7 +50,6 @@ class TaskModelTest(TestCase):
     def test_category_relationship(self):
         """Category should have a reverse relation `tasks` to Task objects."""
         tasks_in_category = self.category.tasks.all()
-        print(tasks_in_category)
         self.assertIn(self.task_future, tasks_in_category)
         self.assertIn(self.task_past, tasks_in_category)
 
